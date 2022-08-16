@@ -13,20 +13,28 @@ do {
       
               case "%":
                       return alert(numero1 * 1.50)
+              
               default:
                   alert("El operador ingresado no existe, vuelva a intentarlo")
                   break;
               } 
-          }   
-          
+          }
   }
   
-  let valor1 = Number(prompt("\n. Bienvenido al conversor de monedas \n. Ingresa el valor que desea convertir"))
-  let operacion = prompt("ingrese la moneda que desea:  \n. usd \n. eur \n. % ")
+  const valor1 = Number(prompt("\n. Bienvenido al conversor de monedas \n. Ingresa el valor que desea convertir"))
+  const operacion = prompt("ingrese la moneda que desea:  \n. usd \n. eur \n. % ")
   bienvenida( valor1, operacion);
-
-
-   
+  
+  //arrays
+//creo una variable para almacenar en un array los operadores
+  const operadores = ["usd", "eur", "%"];
+  console.log(operadores)
+  //uso el metodo push() para agregar monedas
+  operadores.push("btc", "libra hesterlina")
+  console.log(operadores)
+  //uso el metodo pop() para quitar la el ultimo dato ya que no se usa mucho esa moneda
+  operadores.pop()
+  console.log(operadores)
 
 } while (confirm("desea continuar?"));
 
